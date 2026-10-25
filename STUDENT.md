@@ -28,6 +28,7 @@ Hello from Java! czarogithub pozdrawiam
 1. Co różni commit od push? Commit zapisuje wybrane (dodane przez `git add`) zmiany w lokalnej historii repozytorium na moim komputerze. Push wysyła te lokalne commity do repozytorium zdalnego (origin na GitHub). Dopóki nie zrobię push, nikt inny nie widzi moich commitów.
 2. Dlaczego po scaleniu PR wykonuję lokalnie pull? Merge PR dzieje się na GitHub, czyli w repozytorium zdalnym – powstaje tam nowy commit na `main`. Moje lokalne `main` o nim nie wie, dopóki nie pobiorę zmian przez `git pull`. Bez tego dalsza praca (np. nowa gałąź) zaczynałaby się od nieaktualnego kodu.
 3. Co potwierdza zielony wynik naszego CI, a czego nie potwierdza? Potwierdza, że kod z danego commita kompiluje się (g++ w C++17 z ostrzeżeniami, javac z JDK 17) i uruchamia bez błędu w czystym środowisku GitHub Actions. Nie potwierdza, że program wypisuje właściwy tekst (workflow nie porównuje wyniku), że wykonałem wszystkie zadania ani że moje lokalne środowisko jest dobrze skonfigurowane.
+4. Co różni gałąź od oddzielnego repozytorium? Gałąź to osobna linia commitów w tym samym repozytorium – dzieli z `main` wspólną historię, ten sam `origin` i łatwo ją scalić przez PR. Oddzielne repozytorium ma własną historię, własny adres zdalny i własne ustawienia (uprawnienia, Actions); zmiany między repozytoriami nie przechodzą same.
 
 ## Ewentualne problemy środowiska
 Brak.
